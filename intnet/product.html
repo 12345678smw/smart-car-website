@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品详情 - 差速转向自动避障智能小车</title>
+  <meta name="description" content="详细的产品参数、硬件拆解、核心功能原理讲解">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-800 dark:text-gray-100">
+
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 shadow-md backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-car text-white text-xl"></i>
+          </div>
+          <span class="text-xl font-bold text-gray-800 dark:text-white">智能小车</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">首页</a>
+          <a href="product.html" class="nav-link text-blue-600 dark:text-blue-400">产品详情</a>
+          <a href="feature.html" class="nav-link">功能对比</a>
+          <a href="case.html" class="nav-link">成果案例</a>
+          <a href="about.html" class="nav-link">项目介绍</a>
+          <a href="contact.html" class="btn-primary text-sm">咨询购买</a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">首页</a>
+        <a href="product.html" class="block py-2 px-4 rounded-lg bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">产品详情</a>
+        <a href="feature.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">功能对比</a>
+        <a href="case.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">成果案例</a>
+        <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">项目介绍</a>
+        <a href="contact.html" class="block py-2 px-4 rounded-lg bg-blue-600 text-white text-center">咨询购买</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题 -->
+  <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-indigo-700">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">产品详情</h1>
+      <nav class="flex items-center space-x-2 text-blue-100">
+        <a href="index.html" class="hover:text-white transition-colors">首页</a>
+        <i class="fas fa-chevron-right text-sm"></i>
+        <span class="text-white">产品详情</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 整车多角度展示 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">整车展示</h2>
+      <p class="section-subtitle">多角度实拍展示，点击图片放大查看细节</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- 主图 -->
+        <div class="lg:col-span-2">
+          <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=arduino%20robot%20car%20full%20front%20view%20with%20sensors%20oled%20display%20professional%20product%20photo%20white%20background&image_size=landscape_4_3"
+              alt="智能小车正面"
+              data-modal-src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=arduino%20robot%20car%20full%20front%20view%20with%20sensors%20oled%20display%20professional%20product%20photo%20white%20background&image_size=landscape_4_3"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+              <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 侧视图 -->
+        <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=arduino%20robot%20car%20side%20view%20showing%20wheels%20and%20motor%20mount%20professional%20photo&image_size=portrait_4_3"
+            alt="智能小车侧面"
+            data-modal-src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=arduino%20robot%20car%20side%20view%20showing%20wheels%20and%20motor%20mount%20professional%20photo&image_size=portrait_4_3"
+            class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+            <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
+        </div>
+        
+        <!-- 俯视图 -->
+        <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=arduino%20robot%20car%20top%20view%20showing%20circuit%20board%20layout%20professional%20photo&image_size=portrait_4_3"
+            alt="智能小车俯视"
+            data-modal-src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=arduino%20robot%20car%20top%20view%20showing%20circuit%20board%20layout%20professional%20photo&image_size=portrait_4_3"
+            class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+            <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
+        </div>
+        
+        <!-- 细节图 -->
+        <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=close%20up%20of%20robot%20car%20sensor%20array%20and%20oled%20display%20showing%20data%20professional&image_size=portrait_4_3"
+            alt="传感器细节"
+            data-modal-src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=close%20up%20of%20robot%20car%20sensor%20array%20and%20oled%20display%20showing%20data%20professional&image_size=portrait_4_3"
+            class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+            <i class="fas fa-search text-white text-3xl opacity-0 group-hover:opacity-100 transition-opacity"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 硬件参数表格 -->
+  <section id="hardware" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">技术参数</h2>
+      <p class="section-subtitle">详细的硬件规格参数</p>
+      
+      <div class="overflow-x-auto">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>参数类别</th>
+              <th>规格说明</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>整车尺寸</strong></td>
+              <td>长220mm × 宽160mm × 高100mm</td>
+              <td>不含传感器伸出部分</td>
+            </tr>
+            <tr>
+              <td><strong>主控芯片</strong></td>
+              <td>ATmega328P (Arduino Uno兼容)</td>
+              <td>14路数字I/O，6路模拟输入</td>
+            </tr>
+            <tr>
+              <td><strong>驱动模块</strong></td>
+              <td>L298N双H桥电机驱动</td>
+              <td>支持PWM调速，最大2A电流</td>
+            </tr>
+            <tr>
+              <td><strong>电机参数</strong></td>
+              <td>直流减速电机 12V 150rpm</td>
+              <td>带编码器接口，支持测速</td>
+            </tr>
+            <tr>
+              <td><strong>避障传感器</strong></td>
+              <td>5路红外反射式传感器</td>
+              <td>检测距离2-30cm可调</td>
+            </tr>
+            <tr>
+              <td><strong>显示屏</strong></td>
+              <td>128×64 OLED单色显示屏</td>
+              <td>I2C接口，低功耗</td>
+            </tr>
+            <tr>
+              <td><strong>供电电压</strong></td>
+              <td>DC 7.4V-12V</td>
+              <td>推荐使用8节AA电池或锂电池</td>
+            </tr>
+            <tr>
+              <td><strong>载重量</strong></td>
+              <td>最大500g</td>
+              <td>平整地面条件下</td>
+            </tr>
+            <tr>
+              <td><strong>运行速度</strong></td>
+              <td>0.5-1.5m/s</td>
+              <td>PWM调速控制</td>
+            </tr>
+            <tr>
+              <td><strong>通信接口</strong></td>
+              <td>预留蓝牙HC-05接口、串口</td>
+              <td>支持无线遥控扩展</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 元器件拆解 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">元器件拆解</h2>
+      <p class="section-subtitle">核心组件详细介绍</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 主控模块 -->
+        <div class="card-feature">
+          <div class="flex items-start space-x-4">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=arduino%20uno%20microcontroller%20board%20close%20up%20professional%20photo%20white%20background&image_size=square"
+              alt="主控板"
+              class="w-24 h-24 rounded-lg object-cover flex-shrink-0"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">主控模块</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                采用ATmega328P芯片，兼容Arduino Uno开发环境，支持C/C++编程，学习门槛低，资料丰富。
+              </p>
+              <div class="mt-3 space-y-1">
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>32KB Flash程序存储</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>2KB SRAM数据存储</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>1KB EEPROM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 驱动模块 -->
+        <div class="card-feature">
+          <div class="flex items-start space-x-4">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=L298N%20motor%20driver%20module%20for%20arduino%20close%20up%20professional%20photo%20white%20background&image_size=square"
+              alt="驱动模块"
+              class="w-24 h-24 rounded-lg object-cover flex-shrink-0"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">电机驱动模块</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                L298N双H桥驱动芯片，支持两路直流电机独立控制，可实现正反转和PWM调速。
+              </p>
+              <div class="mt-3 space-y-1">
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>最大驱动电流2A</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>支持5-35V电压输入</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>TTL电平控制</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 避障传感器 -->
+        <div class="card-feature">
+          <div class="flex items-start space-x-4">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=infrared%20obstacle%20avoidance%20sensor%20module%20for%20robot%20car%20close%20up%20professional%20photo&image_size=square"
+              alt="避障传感器"
+              class="w-24 h-24 rounded-lg object-cover flex-shrink-0"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">红外避障传感器</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                5路红外反射式传感器，分布于车头四周，实现全方位障碍物检测。
+              </p>
+              <div class="mt-3 space-y-1">
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>检测距离2-30cm</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>数字/模拟双输出</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>灵敏度可调</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 显示屏 -->
+        <div class="card-feature">
+          <div class="flex items-start space-x-4">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=OLED%20display%20module%20128x64%20for%20arduino%20showing%20text%20and%20graphics%20close%20up&image_size=square"
+              alt="OLED显示屏"
+              class="w-24 h-24 rounded-lg object-cover flex-shrink-0"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">OLED显示屏</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                128×64单色OLED显示屏，I2C接口，低功耗，可显示文字、图形、传感器数据。
+              </p>
+              <div class="mt-3 space-y-1">
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>0.96英寸显示区域</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>I2C通信接口</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>对比度可调</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 车轮结构 -->
+        <div class="card-feature">
+          <div class="flex items-start space-x-4">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robot%20car%20wheel%20with%20motor%20mount%20and%20encoder%20close%20up%20professional%20photo&image_size=square"
+              alt="车轮结构"
+              class="w-24 h-24 rounded-lg object-cover flex-shrink-0"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">车轮结构</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                橡胶轮胎配金属轮毂，带防滑纹路，直流减速电机驱动，运行平稳。
+              </p>
+              <div class="mt-3 space-y-1">
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>65mm直径橡胶轮</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>金属齿轮减速箱</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>编码器接口预留</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 供电模块 -->
+        <div class="card-feature">
+          <div class="flex items-start space-x-4">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=lithium%20battery%20pack%20with%20battery%20holder%20for%20robot%20car%20close%20up%20professional%20photo&image_size=square"
+              alt="供电模块"
+              class="w-24 h-24 rounded-lg object-cover flex-shrink-0"
+            />
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">供电模块</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                支持7.4V-12V宽电压输入，带电源开关和电量指示，保护电路完善。
+              </p>
+              <div class="mt-3 space-y-1">
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>DC电源接口</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>电源开关控制</span>
+                </div>
+                <div class="flex items-center text-sm">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  <span>防反接保护</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 差速转向原理 -->
+  <section id="differential" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">差速转向原理</h2>
+      <p class="section-subtitle">双电机独立驱动，实现灵活转向</p>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">转向模式说明</h3>
+          
+          <div class="space-y-6">
+            <!-- 直行 -->
+            <div class="bg-white dark:bg-slate-700 rounded-xl p-6 shadow-md">
+              <div class="flex items-center space-x-4 mb-3">
+                <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-arrow-up text-green-600 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 dark:text-white">直行模式</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">左右电机同速同向旋转</p>
+                </div>
+              </div>
+              <div class="flex justify-center space-x-8">
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-green-600">+100%</span>
+                  <span class="text-xs text-gray-500">左电机</span>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 self-center"></i>
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-green-600">+100%</span>
+                  <span class="text-xs text-gray-500">右电机</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 左转 -->
+            <div class="bg-white dark:bg-slate-700 rounded-xl p-6 shadow-md">
+              <div class="flex items-center space-x-4 mb-3">
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-arrow-left text-blue-600 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 dark:text-white">左转模式</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">左电机减速/停止，右电机全速</p>
+                </div>
+              </div>
+              <div class="flex justify-center space-x-8">
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-yellow-600">0%</span>
+                  <span class="text-xs text-gray-500">左电机</span>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 self-center"></i>
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-green-600">+100%</span>
+                  <span class="text-xs text-gray-500">右电机</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 右转 -->
+            <div class="bg-white dark:bg-slate-700 rounded-xl p-6 shadow-md">
+              <div class="flex items-center space-x-4 mb-3">
+                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-arrow-right text-purple-600 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 dark:text-white">右转模式</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">右电机减速/停止，左电机全速</p>
+                </div>
+              </div>
+              <div class="flex justify-center space-x-8">
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-green-600">+100%</span>
+                  <span class="text-xs text-gray-500">左电机</span>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 self-center"></i>
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-yellow-600">0%</span>
+                  <span class="text-xs text-gray-500">右电机</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- 原地旋转 -->
+            <div class="bg-white dark:bg-slate-700 rounded-xl p-6 shadow-md">
+              <div class="flex items-center space-x-4 mb-3">
+                <div class="w-12 h-12 bg-red-100 dark:bg-red-900/50 rounded-lg flex items-center justify-center">
+                  <i class="fas fa-sync-alt text-red-600 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 dark:text-white">原地旋转</h4>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">左右电机反向同速旋转</p>
+                </div>
+              </div>
+              <div class="flex justify-center space-x-8">
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-red-600">-100%</span>
+                  <span class="text-xs text-gray-500">左电机</span>
+                </div>
+                <i class="fas fa-arrow-right text-gray-400 self-center"></i>
+                <div class="text-center">
+                  <span class="block text-2xl font-bold text-green-600">+100%</span>
+                  <span class="text-xs text-gray-500">右电机</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <div class="absolute inset-0 bg-blue-600/10 rounded-3xl blur-3xl"></div>
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robot%20car%20differential%20steering%20mechanism%20diagram%20showing%20wheel%20rotation%20directions%20technical%20illustration&image_size=portrait_4_3"
+            alt="差速转向原理图"
+            class="relative rounded-2xl shadow-xl w-full"
+          />
+          <div class="mt-6 p-4 bg-white dark:bg-slate-700 rounded-xl shadow-md">
+            <h4 class="font-bold text-gray-800 dark:text-white mb-2">差速转向优势</h4>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                转弯半径小，可实现原地转向
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                转向灵活，适应复杂环境
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                双电机驱动，动力强劲
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                支持精准速度控制
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 避障逻辑原理 -->
+  <section id="obstacle" class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">红外避障逻辑</h2>
+      <p class="section-subtitle">多方位障碍物识别与智能绕行流程</p>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="relative order-2 lg:order-1">
+          <div class="absolute inset-0 bg-cyan-600/10 rounded-3xl blur-3xl"></div>
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robot%20car%20infrared%20sensor%20obstacle%20avoidance%20flowchart%20diagram%20technical%20illustration%20showing%20decision%20making&image_size=portrait_4_3"
+            alt="避障逻辑流程图"
+            class="relative rounded-2xl shadow-xl w-full"
+          />
+        </div>
+        
+        <div class="order-1 lg:order-2">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">避障算法流程</h3>
+          
+          <div class="space-y-4">
+            <!-- 步骤1 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">1</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">传感器数据采集</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">5路红外传感器实时采集障碍物距离数据，传输至主控芯片进行处理</p>
+              </div>
+            </div>
+            
+            <!-- 步骤2 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">2</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">障碍物判断</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">根据传感器阈值判断障碍物位置（左/中/右）及距离远近</p>
+              </div>
+            </div>
+            
+            <!-- 步骤3 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">3</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">路径规划</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">基于障碍物位置，智能选择最优绕行方向（左转/右转/后退）</p>
+              </div>
+            </div>
+            
+            <!-- 步骤4 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">4</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">执行转向</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">通过L298N驱动模块控制电机，实现差速转向绕行</p>
+              </div>
+            </div>
+            
+            <!-- 步骤5 -->
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">5</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">恢复直行</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">绕过障碍物后，传感器检测无遮挡，自动恢复直行模式</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 传感器布局图 -->
+          <div class="mt-8 p-6 bg-gray-50 dark:bg-slate-800 rounded-xl">
+            <h4 class="font-bold text-gray-800 dark:text-white mb-4">传感器布局</h4>
+            <div class="flex justify-center">
+              <div class="relative">
+                <!-- 小车示意图 -->
+                <div class="w-32 h-24 bg-gray-200 dark:bg-slate-600 rounded-lg relative">
+                  <!-- 左传感器 -->
+                  <div class="absolute -left-6 top-1/2 -translate-y-1/2 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
+                    <span class="text-xs text-white">L</span>
+                  </div>
+                  <!-- 左前传感器 -->
+                  <div class="absolute -left-3 -top-3 w-4 h-4 bg-orange-500 rounded-full flex items-center justify-center">
+                    <span class="text-xs text-white">FL</span>
+                  </div>
+                  <!-- 前传感器 -->
+                  <div class="absolute left-1/2 -translate-x-1/2 -top-3 w-4 h-4 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <span class="text-xs text-white">F</span>
+                  </div>
+                  <!-- 右前传感器 -->
+                  <div class="absolute -right-3 -top-3 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                    <span class="text-xs text-white">FR</span>
+                  </div>
+                  <!-- 右传感器 -->
+                  <div class="absolute -right-6 top-1/2 -translate-y-1/2 w-4 h-4 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span class="text-xs text-white">R</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
+              L=左检测 | FL=左前检测 | F=正前检测 | FR=右前检测 | R=右检测
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 配套代码介绍 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">配套代码程序</h2>
+      <p class="section-subtitle">提供完整源代码，包含避障、显示、驱动等核心模块</p>
+      
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- 代码文件列表 -->
+        <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg p-6">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">代码结构</h3>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-3 bg-gray-100 dark:bg-slate-600 rounded-lg">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-file-code text-blue-500"></i>
+                <span class="font-medium text-gray-800 dark:text-white">SmartCar.ino</span>
+              </div>
+              <span class="text-xs text-gray-500">主程序文件</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-gray-100 dark:bg-slate-600 rounded-lg">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-file-code text-green-500"></i>
+                <span class="font-medium text-gray-800 dark:text-white">MotorDriver.h</span>
+              </div>
+              <span class="text-xs text-gray-500">电机驱动模块</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-gray-100 dark:bg-slate-600 rounded-lg">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-file-code text-orange-500"></i>
+                <span class="font-medium text-gray-800 dark:text-white">ObstacleSensor.h</span>
+              </div>
+              <span class="text-xs text-gray-500">避障传感器模块</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-gray-100 dark:bg-slate-600 rounded-lg">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-file-code text-purple-500"></i>
+                <span class="font-medium text-gray-800 dark:text-white">OLEDDisplay.h</span>
+              </div>
+              <span class="text-xs text-gray-500">显示屏模块</span>
+            </div>
+            <div class="flex items-center justify-between p-3 bg-gray-100 dark:bg-slate-600 rounded-lg">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-file-code text-cyan-500"></i>
+                <span class="font-medium text-gray-800 dark:text-white">Config.h</span>
+              </div>
+              <span class="text-xs text-gray-500">配置文件</span>
+            </div>
+          </div>
+          
+          <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+            <h4 class="font-bold text-blue-800 dark:text-blue-300 mb-2">代码特点</h4>
+            <ul class="space-y-2 text-sm text-blue-700 dark:text-blue-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle mr-2"></i>
+                模块化设计，易于理解和修改
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle mr-2"></i>
+                详细注释，适合学习参考
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle mr-2"></i>
+                支持多种运行模式切换
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle mr-2"></i>
+                预留拓展接口
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- 代码截图展示位 -->
+        <div class="bg-white dark:bg-slate-700 rounded-xl shadow-lg p-6">
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">代码预览</h3>
+          
+          <!-- 代码编辑器模拟 -->
+          <div class="bg-gray-900 rounded-lg overflow-hidden">
+            <div class="flex items-center justify-between px-4 py-2 bg-gray-800 border-b border-gray-700">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <span class="text-xs text-gray-400">SmartCar.ino</span>
+            </div>
+            <div class="p-4 overflow-x-auto">
+              <pre class="text-sm text-gray-300"><code><span class="text-purple-400">#include</span> <span class="text-green-400">&lt;MotorDriver.h&gt;</span>
+<span class="text-purple-400">#include</span> <span class="text-green-400">&lt;ObstacleSensor.h&gt;</span>
+<span class="text-purple-400">#include</span> <span class="text-green-400">&lt;OLEDDisplay.h&gt;</span>
+
+<span class="text-blue-400">MotorDriver</span> motor;
+<span class="text-blue-400">ObstacleSensor</span> sensor;
+<span class="text-blue-400">OLEDDisplay</span> display;
+
+<span class="text-purple-400">void</span> <span class="text-yellow-400">setup</span>() {
+  motor.<span class="text-blue-300">init</span>();
+  sensor.<span class="text-blue-300">init</span>();
+  display.<span class="text-blue-300">init</span>();
+  display.<span class="text-blue-300">showWelcome</span>();
+}
+
+<span class="text-purple-400">void</span> <span class="text-yellow-400">loop</span>() {
+  <span class="text-blue-400">ObstacleData</span> data = sensor.<span class="text-blue-300">read</span>();
+  display.<span class="text-blue-300">update</span>(data);
+  
+  <span class="text-purple-400">if</span> (data.<span class="text-blue-300">front</span>) {
+    motor.<span class="text-blue-300">backward</span>(<span class="text-orange-400">200</span>);
+    delay(<span class="text-orange-400">500</span>);
+    <span class="text-purple-400">if</span> (data.<span class="text-blue-300">left</span>) {
+      motor.<span class="text-blue-300">turnRight</span>();
+    } <span class="text-purple-400">else</span> {
+      motor.<span class="text-blue-300">turnLeft</span>();
+    }
+  } <span class="text-purple-400">else</span> {
+    motor.<span class="text-blue-300">forward</span>(<span class="text-orange-400">255</span>);
+  }
+}</code></pre>
+            </div>
+          </div>
+          
+          <div class="mt-4 text-center">
+            <a href="contact.html" class="btn-outline inline-flex items-center">
+              <i class="fas fa-download mr-2"></i> 获取完整代码
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-car text-white text-xl"></i>
+            </div>
+            <span class="text-xl font-bold text-white">智能小车</span>
+          </div>
+          <p class="text-gray-400 mb-6 max-w-md">
+            专注于电子竞赛与课程设计硬件研发，为高校学生提供高质量的智能小车解决方案
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-weixin"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-bilibili"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">快速链接</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="hover:text-blue-400 transition-colors">首页</a></li>
+            <li><a href="product.html" class="hover:text-blue-400 transition-colors">产品详情</a></li>
+            <li><a href="feature.html" class="hover:text-blue-400 transition-colors">功能对比</a></li>
+            <li><a href="case.html" class="hover:text-blue-400 transition-colors">成果案例</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">联系我们</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-phone text-blue-500"></i>
+              <span>400-123-4567</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-envelope text-blue-500"></i>
+              <span>support@smartcar.com</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <span>北京市海淀区中关村大街1号</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-500">
+          © 2024 智能小车科技. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 图片弹窗 -->
+  <div id="image-modal" class="fixed inset-0 bg-black/90 z-50 hidden flex items-center justify-center p-4">
+    <img id="modal-image" src="" alt="" class="max-w-full max-h-full rounded-lg shadow-2xl">
+    <button id="close-modal" class="absolute top-4 right-4 text-white p-2 hover:text-gray-300 transition-colors">
+      <i class="fas fa-times text-2xl"></i>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

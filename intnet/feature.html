@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>功能优势对比 - 差速转向自动避障智能小车</title>
+  <meta name="description" content="与普通简易小车的详细对比，展示产品优势">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-800 dark:text-gray-100">
+
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 shadow-md backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-car text-white text-xl"></i>
+          </div>
+          <span class="text-xl font-bold text-gray-800 dark:text-white">智能小车</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">首页</a>
+          <a href="product.html" class="nav-link">产品详情</a>
+          <a href="feature.html" class="nav-link text-blue-600 dark:text-blue-400">功能对比</a>
+          <a href="case.html" class="nav-link">成果案例</a>
+          <a href="about.html" class="nav-link">项目介绍</a>
+          <a href="contact.html" class="btn-primary text-sm">咨询购买</a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">首页</a>
+        <a href="product.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">产品详情</a>
+        <a href="feature.html" class="block py-2 px-4 rounded-lg bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">功能对比</a>
+        <a href="case.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">成果案例</a>
+        <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">项目介绍</a>
+        <a href="contact.html" class="block py-2 px-4 rounded-lg bg-blue-600 text-white text-center">咨询购买</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题 -->
+  <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-600 to-purple-700">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">功能优势对比</h1>
+      <nav class="flex items-center space-x-2 text-indigo-100">
+        <a href="index.html" class="hover:text-white transition-colors">首页</a>
+        <i class="fas fa-chevron-right text-sm"></i>
+        <span class="text-white">功能对比</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 对比表格 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">产品对比</h2>
+      <p class="section-subtitle">与普通简易小车的详细参数对比</p>
+      
+      <div class="overflow-x-auto">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>对比项</th>
+              <th>本产品智能小车</th>
+              <th>普通简易小车</th>
+              <th>优势说明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>避障精度</strong></td>
+              <td class="text-green-600">5路红外传感器，<br>检测距离2-30cm可调</td>
+              <td class="text-red-500">1-2路传感器，<br>检测距离固定</td>
+              <td>多方位检测，盲区小，<br>适应复杂环境</td>
+            </tr>
+            <tr>
+              <td><strong>转向灵活性</strong></td>
+              <td class="text-green-600">差速转向，支持<br>原地转向、精准转弯</td>
+              <td class="text-red-500">舵机转向，<br>转弯半径大</td>
+              <td>灵活性远超舵机转向，<br>适应狭窄空间</td>
+            </tr>
+            <tr>
+              <td><strong>屏幕交互</strong></td>
+              <td class="text-green-600">128×64 OLED显示屏，<br>实时显示状态数据</td>
+              <td class="text-red-500">无屏幕或LED指示灯</td>
+              <td>调试便捷，演示效果专业</td>
+            </tr>
+            <tr>
+              <td><strong>拓展性</strong></td>
+              <td class="text-green-600">预留蓝牙、循迹、<br>测速等模块接口</td>
+              <td class="text-red-500">接口有限，<br>难以拓展</td>
+              <td>支持多种功能扩展，<br>满足进阶需求</td>
+            </tr>
+            <tr>
+              <td><strong>驱动能力</strong></td>
+              <td class="text-green-600">双直流减速电机，<br>载重500g</td>
+              <td class="text-red-500">单电机或小型电机，<br>载重有限</td>
+              <td>动力强劲，<br>运行稳定</td>
+            </tr>
+            <tr>
+              <td><strong>调速方式</strong></td>
+              <td class="text-green-600">PWM无级调速</td>
+              <td class="text-red-500">固定速度或档位调速</td>
+              <td>速度控制精准，<br>适应不同场景</td>
+            </tr>
+            <tr>
+              <td><strong>配套资料</strong></td>
+              <td class="text-green-600">完整电路图、源代码、<br>调试指南、教学视频</td>
+              <td class="text-red-500">资料有限或无资料</td>
+              <td>学习门槛低，<br>上手快</td>
+            </tr>
+            <tr>
+              <td><strong>适用场景</strong></td>
+              <td class="text-green-600">科创竞赛、课程设计、<br>项目开发</td>
+              <td class="text-red-500">简单玩具、<br>入门体验</td>
+              <td>专业级硬件，<br>满足竞赛要求</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 功能雷达图 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title text-center">性能雷达图</h2>
+      <p class="section-subtitle text-center mx-auto">直观展示各项性能指标</p>
+      
+      <div class="flex justify-center">
+        <div class="relative w-80 h-80">
+          <svg viewBox="0 0 200 200" class="w-full h-full">
+            <!-- 网格线 -->
+            <polygon points="100,10 190,100 100,190 10,100" fill="none" stroke="#e5e7eb" stroke-width="1" class="dark:stroke-slate-600"/>
+            <polygon points="100,40 160,100 100,160 40,100" fill="none" stroke="#e5e7eb" stroke-width="1" class="dark:stroke-slate-600"/>
+            <polygon points="100,70 130,100 100,130 70,100" fill="none" stroke="#e5e7eb" stroke-width="1" class="dark:stroke-slate-600"/>
+            <!-- 轴 -->
+            <line x1="100" y1="10" x2="100" y2="190" stroke="#e5e7eb" class="dark:stroke-slate-600"/>
+            <line x1="10" y1="100" x2="190" y2="100" stroke="#e5e7eb" class="dark:stroke-slate-600"/>
+            <line x1="43" y1="43" x2="157" y2="157" stroke="#e5e7eb" class="dark:stroke-slate-600"/>
+            <line x1="157" y1="43" x2="43" y2="157" stroke="#e5e7eb" class="dark:stroke-slate-600"/>
+            
+            <!-- 本产品 -->
+            <polygon points="100,20 170,80 170,120 100,180 30,120 30,80" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="2"/>
+            
+            <!-- 普通小车 -->
+            <polygon points="100,60 130,85 130,115 100,140 70,115 70,85" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="2"/>
+            
+            <!-- 标签 -->
+            <text x="100" y="15" text-anchor="middle" fill="#374151" class="dark:fill-gray-300 text-xs font-bold">避障精度</text>
+            <text x="195" y="103" text-anchor="middle" fill="#374151" class="dark:fill-gray-300 text-xs font-bold">转向灵活</text>
+            <text x="100" y="195" text-anchor="middle" fill="#374151" class="dark:fill-gray-300 text-xs font-bold">屏幕交互</text>
+            <text x="5" y="103" text-anchor="middle" fill="#374151" class="dark:fill-gray-300 text-xs font-bold">拓展能力</text>
+            <text x="30" y="35" text-anchor="middle" fill="#374151" class="dark:fill-gray-300 text-xs font-bold">驱动能力</text>
+            <text x="170" y="35" text-anchor="middle" fill="#374151" class="dark:fill-gray-300 text-xs font-bold">配套资料</text>
+          </svg>
+          
+          <!-- 图例 -->
+          <div class="absolute -bottom-16 left-0 right-0 flex justify-center space-x-8">
+            <div class="flex items-center space-x-2">
+              <div class="w-4 h-4 bg-blue-500 rounded"></div>
+              <span class="text-sm text-gray-600 dark:text-gray-400">本产品</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <div class="w-4 h-4 bg-red-500 rounded"></div>
+              <span class="text-sm text-gray-600 dark:text-gray-400">普通小车</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 拓展能力展示 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">拓展能力</h2>
+      <p class="section-subtitle">预留丰富接口，支持多种功能扩展</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- 蓝牙模块 -->
+        <div class="card-hover p-8">
+          <div class="w-20 h-20 bg-blue-100 dark:bg-blue-900/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-bluetooth-b text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 text-center">蓝牙遥控</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-center mb-6 leading-relaxed">
+            预留HC-05蓝牙模块接口，支持手机APP远程遥控，实现手动/自动模式切换
+          </p>
+          <div class="bg-gray-100 dark:bg-slate-800 rounded-xl p-4">
+            <h4 class="font-bold text-gray-800 dark:text-white mb-3 text-sm">拓展功能</h4>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                手机APP远程控制
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                自定义路径规划
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                数据实时回传
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                模式一键切换
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- 测速模块 -->
+        <div class="card-hover p-8">
+          <div class="w-20 h-20 bg-green-100 dark:bg-green-900/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-gauge-high text-4xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 text-center">测速功能</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-center mb-6 leading-relaxed">
+            电机带编码器接口，支持速度测量与PID速度控制，实现精准速度调节
+          </p>
+          <div class="bg-gray-100 dark:bg-slate-800 rounded-xl p-4">
+            <h4 class="font-bold text-gray-800 dark:text-white mb-3 text-sm">拓展功能</h4>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                实时速度显示
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                PID速度控制
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                里程统计
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                加速度测量
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- 循迹功能 -->
+        <div class="card-hover p-8">
+          <div class="w-20 h-20 bg-yellow-100 dark:bg-yellow-900/50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-route text-4xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4 text-center">循迹功能</h3>
+          <p class="text-gray-600 dark:text-gray-400 text-center mb-6 leading-relaxed">
+            预留循迹传感器接口，支持黑白线循迹，实现自动沿指定路径行驶
+          </p>
+          <div class="bg-gray-100 dark:bg-slate-800 rounded-xl p-4">
+            <h4 class="font-bold text-gray-800 dark:text-white mb-3 text-sm">拓展功能</h4>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                黑白线识别
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                自动路径跟踪
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                弯道自适应
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                速度自动调整
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 更多拓展 -->
+      <div class="mt-12 p-8 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-700 rounded-xl">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">更多拓展可能</h3>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center">
+              <i class="fas fa-camera text-purple-600"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 dark:text-white">摄像头模块</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">视觉识别与追踪</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-pink-100 dark:bg-pink-900/50 rounded-lg flex items-center justify-center">
+              <i class="fas fa-battery-full text-pink-600"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 dark:text-white">锂电池模块</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">更长续航时间</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-lg flex items-center justify-center">
+              <i class="fas fa-wifi text-orange-600"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 dark:text-white">WiFi模块</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">远程监控与控制</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-cyan-100 dark:bg-cyan-900/50 rounded-lg flex items-center justify-center">
+              <i class="fas fa-microchip text-cyan-600"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 dark:text-white">超声波模块</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">精确距离测量</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-car text-white text-xl"></i>
+            </div>
+            <span class="text-xl font-bold text-white">智能小车</span>
+          </div>
+          <p class="text-gray-400 mb-6 max-w-md">
+            专注于电子竞赛与课程设计硬件研发，为高校学生提供高质量的智能小车解决方案
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-weixin"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-bilibili"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">快速链接</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="hover:text-blue-400 transition-colors">首页</a></li>
+            <li><a href="product.html" class="hover:text-blue-400 transition-colors">产品详情</a></li>
+            <li><a href="feature.html" class="hover:text-blue-400 transition-colors">功能对比</a></li>
+            <li><a href="case.html" class="hover:text-blue-400 transition-colors">成果案例</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">联系我们</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-phone text-blue-500"></i>
+              <span>400-123-4567</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-envelope text-blue-500"></i>
+              <span>support@smartcar.com</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <span>北京市海淀区中关村大街1号</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-500">
+          © 2024 智能小车科技. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

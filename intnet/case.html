@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成果案例 - 差速转向自动避障智能小车</title>
+  <meta name="description" content="高校课程设计、电子竞赛获奖案例展示">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-800 dark:text-gray-100">
+
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 shadow-md backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-car text-white text-xl"></i>
+          </div>
+          <span class="text-xl font-bold text-gray-800 dark:text-white">智能小车</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">首页</a>
+          <a href="product.html" class="nav-link">产品详情</a>
+          <a href="feature.html" class="nav-link">功能对比</a>
+          <a href="case.html" class="nav-link text-blue-600 dark:text-blue-400">成果案例</a>
+          <a href="about.html" class="nav-link">项目介绍</a>
+          <a href="contact.html" class="btn-primary text-sm">咨询购买</a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">首页</a>
+        <a href="product.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">产品详情</a>
+        <a href="feature.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">功能对比</a>
+        <a href="case.html" class="block py-2 px-4 rounded-lg bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">成果案例</a>
+        <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">项目介绍</a>
+        <a href="contact.html" class="block py-2 px-4 rounded-lg bg-blue-600 text-white text-center">咨询购买</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题 -->
+  <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-600 to-emerald-700">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">成果案例</h1>
+      <nav class="flex items-center space-x-2 text-green-100">
+        <a href="index.html" class="hover:text-white transition-colors">首页</a>
+        <i class="fas fa-chevron-right text-sm"></i>
+        <span class="text-white">成果案例</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 竞赛获奖案例 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">竞赛获奖案例</h2>
+      <p class="section-subtitle">众多高校团队使用本产品在各类电子竞赛中获奖</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 案例1 -->
+        <div class="card-hover overflow-hidden">
+          <div class="relative h-56">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20students%20receiving%20award%20at%20national%20electronics%20competition%20ceremony&image_size=landscape_4_3"
+              alt="全国一等奖"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-red-600 text-white text-sm font-bold rounded-full">
+                全国一等奖
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">全国大学生电子设计竞赛</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              某985高校团队基于本产品开发智能避障小车，获得全国一等奖
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500">2023年</span>
+              <span class="text-blue-600 font-medium">查看详情</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 案例2 -->
+        <div class="card-hover overflow-hidden">
+          <div class="relative h-56">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robot%20car%20competition%20with%20multiple%20teams%20in%20university%20laboratory&image_size=landscape_4_3"
+              alt="省级一等奖"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-orange-500 text-white text-sm font-bold rounded-full">
+                省级一等奖
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">省级电子竞赛</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              某理工大学团队使用本产品获得省级电子竞赛一等奖
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500">2023年</span>
+              <span class="text-blue-600 font-medium">查看详情</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 案例3 -->
+        <div class="card-hover overflow-hidden">
+          <div class="relative h-56">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=innovation%20competition%20award%20trophy%20with%20robot%20car%20display&image_size=landscape_4_3"
+              alt="创新大赛"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-purple-600 text-white text-sm font-bold rounded-full">
+                创新奖
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">大学生科技创新大赛</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              某高校团队凭借基于本产品的创新项目获得科技创新奖
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500">2024年</span>
+              <span class="text-blue-600 font-medium">查看详情</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 案例4 -->
+        <div class="card-hover overflow-hidden">
+          <div class="relative h-56">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robot%20car%20speed%20race%20competition%20with%20students%20cheering&image_size=landscape_4_3"
+              alt="智能车竞赛"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-blue-600 text-white text-sm font-bold rounded-full">
+                二等奖
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">全国智能车竞赛</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              某团队使用本产品改装参加全国智能车竞赛获得二等奖
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500">2023年</span>
+              <span class="text-blue-600 font-medium">查看详情</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 案例5 -->
+        <div class="card-hover overflow-hidden">
+          <div class="relative h-56">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robot%20car%20exhibition%20at%20science%20and%20technology%20fair&image_size=landscape_4_3"
+              alt="科创展示"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-cyan-600 text-white text-sm font-bold rounded-full">
+                优秀展示奖
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">校园科技文化节</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              某高校学生社团使用本产品在科技文化节展示获得优秀展示奖
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500">2024年</span>
+              <span class="text-blue-600 font-medium">查看详情</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 案例6 -->
+        <div class="card-hover overflow-hidden">
+          <div class="relative h-56">
+            <img 
+              src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=robot%20car%20project%20defense%20presentation%20with%20students%20and%20professors&image_size=landscape_4_3"
+              alt="课程设计"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 bg-green-600 text-white text-sm font-bold rounded-full">
+                优秀课程设计
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">自动化原理课程设计</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              多所高校学生使用本产品完成课程设计，获得优秀成绩
+            </p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500">2023-2024</span>
+              <span class="text-blue-600 font-medium">查看详情</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 实物搭建与调试 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title text-center">项目实施过程</h2>
+      <p class="section-subtitle text-center mx-auto">从搭建到调试的完整流程</p>
+      
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- 阶段1 -->
+        <div class="text-center">
+          <div class="w-24 h-24 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl font-bold text-blue-600">1</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">硬件搭建</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            根据电路图组装硬件，连接主控板、驱动模块、传感器、显示屏等组件
+          </p>
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20assembling%20robot%20car%20hardware%20components%20on%20breadboard%20step%20by%20step&image_size=square"
+            alt="硬件搭建"
+            class="rounded-xl shadow-lg w-full"
+          />
+        </div>
+        
+        <!-- 阶段2 -->
+        <div class="text-center">
+          <div class="w-24 h-24 bg-cyan-100 dark:bg-cyan-900/50 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl font-bold text-cyan-600">2</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">软件编程</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            使用Arduino IDE编写代码，实现避障算法、电机控制、显示驱动等功能
+          </p>
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20programming%20arduino%20code%20on%20laptop%20for%20robot%20car%20project&image_size=square"
+            alt="软件编程"
+            class="rounded-xl shadow-lg w-full"
+          />
+        </div>
+        
+        <!-- 阶段3 -->
+        <div class="text-center">
+          <div class="w-24 h-24 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-4xl font-bold text-green-600">3</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-4">调试优化</h3>
+          <p class="text-gray-600 dark:text-gray-400 mb-6">
+            测试运行效果，调整传感器灵敏度、电机参数，优化避障算法
+          </p>
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=student%20testing%20and%20debugging%20robot%20car%20in%20laboratory%20environment&image_size=square"
+            alt="调试优化"
+            class="rounded-xl shadow-lg w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 答辩展示 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">答辩展示</h2>
+      <p class="section-subtitle">专业的答辩展示材料和现场表现</p>
+      
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">答辩准备要点</h3>
+          
+          <div class="space-y-4">
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold">1</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">项目背景介绍</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">说明项目选题背景、研究意义和应用价值</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold">2</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">硬件设计说明</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">展示硬件架构图、电路原理图、元器件选型</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold">3</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">软件算法讲解</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">介绍避障算法流程、差速转向控制逻辑</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold">4</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">演示视频</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">准备小车运行演示视频，展示避障和转向效果</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 text-white font-bold">5</div>
+              <div>
+                <h4 class="font-bold text-gray-800 dark:text-white">问题准备</h4>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">准备常见问题的回答，包括原理、参数、拓展方向</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <img 
+            src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=students%20presenting%20robot%20car%20project%20in%20front%20of%20professors%20at%20thesis%20defense&image_size=portrait_4_3"
+            alt="答辩展示"
+            class="rounded-2xl shadow-xl w-full"
+          />
+          
+          <div class="mt-6 p-6 bg-gray-100 dark:bg-slate-800 rounded-xl">
+            <h4 class="font-bold text-gray-800 dark:text-white mb-4">成功答辩案例</h4>
+            <div class="space-y-3">
+              <div class="flex items-center justify-between p-3 bg-white dark:bg-slate-700 rounded-lg">
+                <span class="text-gray-700 dark:text-gray-300">某高校自动化专业</span>
+                <span class="text-green-600 font-bold">优秀</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-white dark:bg-slate-700 rounded-lg">
+                <span class="text-gray-700 dark:text-gray-300">某理工大学电子信息专业</span>
+                <span class="text-green-600 font-bold">优秀</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-white dark:bg-slate-700 rounded-lg">
+                <span class="text-gray-700 dark:text-gray-300">某师范大学物理专业</span>
+                <span class="text-blue-600 font-bold">良好</span>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-white dark:bg-slate-700 rounded-lg">
+                <span class="text-gray-700 dark:text-gray-300">某职业技术学院</span>
+                <span class="text-green-600 font-bold">优秀</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-car text-white text-xl"></i>
+            </div>
+            <span class="text-xl font-bold text-white">智能小车</span>
+          </div>
+          <p class="text-gray-400 mb-6 max-w-md">
+            专注于电子竞赛与课程设计硬件研发，为高校学生提供高质量的智能小车解决方案
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-weixin"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-bilibili"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">快速链接</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="hover:text-blue-400 transition-colors">首页</a></li>
+            <li><a href="product.html" class="hover:text-blue-400 transition-colors">产品详情</a></li>
+            <li><a href="feature.html" class="hover:text-blue-400 transition-colors">功能对比</a></li>
+            <li><a href="case.html" class="hover:text-blue-400 transition-colors">成果案例</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">联系我们</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-phone text-blue-500"></i>
+              <span>400-123-4567</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-envelope text-blue-500"></i>
+              <span>support@smartcar.com</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <span>北京市海淀区中关村大街1号</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-500">
+          © 2024 智能小车科技. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

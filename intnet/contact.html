@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>咨询联系 - 差速转向自动避障智能小车</title>
+  <meta name="description" content="在线留言、咨询电话、常见问题解答">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-slate-900 text-gray-800 dark:text-gray-100">
+
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-slate-900/95 shadow-md backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+            <i class="fas fa-car text-white text-xl"></i>
+          </div>
+          <span class="text-xl font-bold text-gray-800 dark:text-white">智能小车</span>
+        </a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link">首页</a>
+          <a href="product.html" class="nav-link">产品详情</a>
+          <a href="feature.html" class="nav-link">功能对比</a>
+          <a href="case.html" class="nav-link">成果案例</a>
+          <a href="about.html" class="nav-link">项目介绍</a>
+          <a href="contact.html" class="nav-link text-blue-600 dark:text-blue-400">咨询联系</a>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+            <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">首页</a>
+        <a href="product.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">产品详情</a>
+        <a href="feature.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">功能对比</a>
+        <a href="case.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">成果案例</a>
+        <a href="about.html" class="block py-2 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-slate-800">项目介绍</a>
+        <a href="contact.html" class="block py-2 px-4 rounded-lg bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">咨询联系</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面标题 -->
+  <section class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-rose-600 to-pink-700">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">咨询联系</h1>
+      <nav class="flex items-center space-x-2 text-rose-100">
+        <a href="index.html" class="hover:text-white transition-colors">首页</a>
+        <i class="fas fa-chevron-right text-sm"></i>
+        <span class="text-white">咨询联系</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 在线留言表单 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="section-title">在线留言</h2>
+          <p class="section-subtitle">填写以下信息，我们会尽快与您联系</p>
+          
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">姓名 <span class="text-red-500">*</span></label>
+              <input type="text" id="name" class="form-input" placeholder="请输入您的姓名">
+            </div>
+            
+            <div>
+              <label for="school" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">学校/单位 <span class="text-red-500">*</span></label>
+              <input type="text" id="school" class="form-input" placeholder="请输入学校或单位名称">
+            </div>
+            
+            <div>
+              <label for="contact" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">联系方式 <span class="text-red-500">*</span></label>
+              <input type="text" id="contact" class="form-input" placeholder="请输入手机号或邮箱">
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">咨询内容 <span class="text-red-500">*</span></label>
+              <textarea id="message" rows="6" class="form-textarea" placeholder="请详细描述您的咨询需求，至少10个字符"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary w-full">提交留言</button>
+          </form>
+        </div>
+        
+        <div>
+          <h2 class="section-title">联系方式</h2>
+          <p class="section-subtitle">多种方式联系我们</p>
+          
+          <div class="space-y-6">
+            <!-- 电话 -->
+            <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-slate-800 rounded-xl">
+              <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-phone text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">咨询电话</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">400-123-4567</p>
+                <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">服务时间：周一至周五 9:00-18:00</p>
+              </div>
+            </div>
+            
+            <!-- 邮箱 -->
+            <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-slate-800 rounded-xl">
+              <div class="w-14 h-14 bg-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fas fa-envelope text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">电子邮箱</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">support@smartcar.com</p>
+                <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">一般在24小时内回复</p>
+              </div>
+            </div>
+            
+            <!-- 微信 -->
+            <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-slate-800 rounded-xl">
+              <div class="w-14 h-14 bg-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fab fa-weixin text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">微信咨询</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">添加客服微信：SmartCar_Service</p>
+                <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">支持一对一技术咨询</p>
+              </div>
+            </div>
+            
+            <!-- QQ -->
+            <div class="flex items-start space-x-4 p-6 bg-gray-100 dark:bg-slate-800 rounded-xl">
+              <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i class="fab fa-qq text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">QQ交流群</h3>
+                <p class="text-gray-600 dark:text-gray-400 mt-1">群号：123456789</p>
+                <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">千人群，交流学习心得</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ问答 -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-800">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="section-title text-center">常见问题</h2>
+      <p class="section-subtitle text-center">您可能想了解的问题</p>
+      
+      <div class="space-y-4">
+        <!-- FAQ1 -->
+        <div class="faq-item bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-md">
+          <div class="faq-header flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
+            <h3 class="font-bold text-gray-800 dark:text-white">这款小车适合什么水平的学生使用？</h3>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </div>
+          <div class="faq-content hidden">
+            <div class="p-6 pt-0 text-gray-600 dark:text-gray-400">
+              本产品适合电子信息、自动化、计算机等专业的本科生使用，无论是课程设计还是竞赛项目都非常合适。即使您是零基础，我们提供的完整教学资料和源代码也能帮助您快速上手。
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ2 -->
+        <div class="faq-item bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-md">
+          <div class="faq-header flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
+            <h3 class="font-bold text-gray-800 dark:text-white">购买后提供哪些技术支持？</h3>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </div>
+          <div class="faq-content hidden">
+            <div class="p-6 pt-0 text-gray-600 dark:text-gray-400">
+              购买后您将获得：完整电路图、源代码、调试指南、教学视频、技术文档。同时我们提供微信和QQ群技术支持，有问题可以随时咨询。
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ3 -->
+        <div class="faq-item bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-md">
+          <div class="faq-header flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
+            <h3 class="font-bold text-gray-800 dark:text-white">小车支持哪些扩展功能？</h3>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </div>
+          <div class="faq-content hidden">
+            <div class="p-6 pt-0 text-gray-600 dark:text-gray-400">
+              小车预留了丰富的扩展接口，支持加装蓝牙模块（无线遥控）、循迹传感器（自动循迹）、测速模块（速度测量）、超声波模块（精确测距）、摄像头模块（视觉识别）等。
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ4 -->
+        <div class="faq-item bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-md">
+          <div class="faq-header flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
+            <h3 class="font-bold text-gray-800 dark:text-white">需要自己焊接吗？</h3>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </div>
+          <div class="faq-content hidden">
+            <div class="p-6 pt-0 text-gray-600 dark:text-gray-400">
+              不需要焊接！所有模块都采用插拔式接口，只需按照说明书连接杜邦线即可完成组装。如果您需要焊接版，也可以联系客服定制。
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ5 -->
+        <div class="faq-item bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-md">
+          <div class="faq-header flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
+            <h3 class="font-bold text-gray-800 dark:text-white">价格是多少？支持团购吗？</h3>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </div>
+          <div class="faq-content hidden">
+            <div class="p-6 pt-0 text-gray-600 dark:text-gray-400">
+              具体价格请咨询客服。我们支持高校团购，购买10套以上可享受批量优惠。同时提供发票支持，方便实验室采购报销。
+            </div>
+          </div>
+        </div>
+        
+        <!-- FAQ6 -->
+        <div class="faq-item bg-white dark:bg-slate-700 rounded-xl overflow-hidden shadow-md">
+          <div class="faq-header flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-600 transition-colors">
+            <h3 class="font-bold text-gray-800 dark:text-white">如何获取源代码？</h3>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+          </div>
+          <div class="faq-content hidden">
+            <div class="p-6 pt-0 text-gray-600 dark:text-gray-400">
+              购买产品后，我们会通过邮箱发送源代码下载链接。代码包含完整的项目文件，包括主程序、电机驱动、传感器模块、显示模块等，并有详细注释。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-gray-900 text-gray-300 py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg flex items-center justify-center">
+              <i class="fas fa-car text-white text-xl"></i>
+            </div>
+            <span class="text-xl font-bold text-white">智能小车</span>
+          </div>
+          <p class="text-gray-400 mb-6 max-w-md">
+            专注于电子竞赛与课程设计硬件研发，为高校学生提供高质量的智能小车解决方案
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-weixin"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <i class="fab fa-bilibili"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">快速链接</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="hover:text-blue-400 transition-colors">首页</a></li>
+            <li><a href="product.html" class="hover:text-blue-400 transition-colors">产品详情</a></li>
+            <li><a href="feature.html" class="hover:text-blue-400 transition-colors">功能对比</a></li>
+            <li><a href="case.html" class="hover:text-blue-400 transition-colors">成果案例</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-4">联系我们</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-phone text-blue-500"></i>
+              <span>400-123-4567</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-envelope text-blue-500"></i>
+              <span>support@smartcar.com</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <span>北京市海淀区中关村大街1号</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-500">
+          © 2024 智能小车科技. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
